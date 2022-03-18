@@ -1,0 +1,9 @@
+<h1>Synth list</h1>
+
+<% if @synths.empty? %>
+  <p>No instruments found</p>
+<% else %>
+  <% @synths.each do |synth| %>
+    <%= synth.name %>
+  <% end %>
+<% end %>
