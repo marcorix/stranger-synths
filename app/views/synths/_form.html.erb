@@ -1,0 +1,14 @@
+<div class="row justify-content-center">
+  <div class="col-6">
+    <%= simple_form_for @synth do |f|%>
+    <%= f.input :name %>
+    <%= f.input :brand %>
+    <%= f.input :year %>
+    <%= f.input :polyphony %>
+    <%= f.input :conditions %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.button :submit, class: "btn-primary" %>
+    <% end %>
+  </div>
+</div>

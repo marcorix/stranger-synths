@@ -6,7 +6,8 @@ class CreateSynths < ActiveRecord::Migration[6.1]
       t.integer :price
       t.integer :year
       t.string :polyphony
-      t.string :condition
+      t.string :conditions
+      t.text :description
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
