@@ -10,4 +10,5 @@
 
 <% if @synth.user == current_user %>
   <%= link_to 'Edit', edit_synth_path(@synth) %>
+  <%= link_to 'Delete', @synth, method: :delete, data: { confirm: "Are you sure to delete #{@synth.name}?"} %>
 <% end %>
