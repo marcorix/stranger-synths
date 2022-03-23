@@ -3,8 +3,12 @@
     <% if @synths.empty? %>
       <p>No instruments found</p>
     <% else %>
+    <ul>
       <% @synths.each do |synth| %>
-        <%= link_to synth.name, synth %>
+        <li>
+          <%= link_to synth.name, synth %>
+        </li>
       <% end %>
+    </ul>
     <% end %>
 </div>
