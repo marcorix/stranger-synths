@@ -16,7 +16,7 @@ class SynthsController < ApplicationController
     @synth.user = current_user
 
     if @synth.save
-      redirect_to @synt, notice: 'List was succesfully created.'
+      redirect_to @synth, notice: 'List was succesfully created.'
     else
       render :new
     end
