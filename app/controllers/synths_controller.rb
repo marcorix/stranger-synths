@@ -5,8 +5,7 @@ class SynthsController < ApplicationController
     @synths = Synth.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @synth = Synth.new
@@ -23,8 +22,7 @@ class SynthsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @synth.update(synth_params)
@@ -35,7 +33,6 @@ class SynthsController < ApplicationController
     @synth.destroy
     redirect_to synths_path
   end
-
 
   private
 

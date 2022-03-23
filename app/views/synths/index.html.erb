@@ -4,7 +4,7 @@
       <p>No instruments found</p>
     <% else %>
       <% @synths.each do |synth| %>
-        <%= synth.name %>
+        <%= link_to synth.name, synth %>
       <% end %>
     <% end %>
 </div>

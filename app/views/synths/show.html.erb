@@ -1,7 +1,13 @@
-<h1><%= @synth.name.capitalize %></h1>
-<p><%= @synth.brand.capitalize %></p>
+<h1> <%= @synth.brand.capitalize %> <%= @synth.name.capitalize %> </h1>
+<p></p>
 <p>Price: £<%= @synth.price %> p/day</p>
 <p>Year: <%= @synth.year %></p>
 <p>Conditions: <%= @synth.conditions.capitalize %></p>
 <p>Description <%= @synth.description.capitalize %></p>
 <p>Polyphony: <%= @synth.polyphony %></p>
+
+<%= link_to 'Back', synths_path %>
+
+<% if @synth.user == current_user %>
+  <%= link_to 'Edit', edit_synth_path(@synth) %>
+<% end %>
