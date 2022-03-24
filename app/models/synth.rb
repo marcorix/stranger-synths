@@ -1,6 +1,6 @@
 class Synth < ApplicationRecord
   belongs_to :user
-  has_one_attached :photo
+  has_many_attached :photos
 
   validates :name, :brand, :price, :year, :polyphony, :conditions, presence: true
 end
