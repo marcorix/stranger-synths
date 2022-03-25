@@ -1,7 +1,7 @@
 <h1> <%= @synth.brand.capitalize %> <%= @synth.name.capitalize %> </h1>
-<% if @synth.photos.attached? %>
-  <% @synth.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 300, width: 500, crop: :fill %>
+<% if @synth.images.attached? %>
+  <% @synth.images.each do |image| %>
+    <%= cl_image_tag image.key, height: 300, width: 500, crop: :fill %>
   <% end %>
 <% end %>
 <br>
