@@ -19,3 +19,17 @@
   <%= link_to 'Edit', edit_synth_path(@synth) %>
   <%= link_to 'Delete', @synth, method: :delete, data: { confirm: "Are you sure to delete #{@synth.name}?"} %>
 <% end %>
+
+<hr>
+
+<% if @synth.user != current_user %>
+  <div class="col-6">
+    <%= simple_form_for ([@synth, @booking]) do |f|%>
+    <%= f.input :start_date, as: :date, html5: true %>
+    <%= f.input :end_date, as: :date, html5: true %>
+    <%= f.button :submit, class: "btn-primary" %>
+    <% end %>
+  </div>
+  <% else %>
+    <h2>You own this item</h2>
+  <% end %>
