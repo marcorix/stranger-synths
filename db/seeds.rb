@@ -15,10 +15,10 @@ puts "Creating Synths"
 synth1 = Synth.create!(
   name: "ms-20",
   brand: "korg",
-  price: 20,
+  price: 15,
   category: "Analog",
-  description: "mini synth with all patch cables and power supply",
-  conditions: "like new",
+  description: "Mini synth with all patch cables and power supply",
+  conditions: Synth::CONDITIONS.sample,
   user: user1
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648221030/lsnj5sypsi8df7ds3gnl.jpg")
