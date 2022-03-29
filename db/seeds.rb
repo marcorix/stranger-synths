@@ -16,7 +16,7 @@ synth1 = Synth.create!(
   name: "ms-20",
   brand: "korg",
   price: 20,
-  category: "analog",
+  category: "Analog",
   description: "mini synth with all patch cables and power supply",
   conditions: "like new",
   user: user1
