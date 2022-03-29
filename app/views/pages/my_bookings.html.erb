@@ -1,0 +1,8 @@
+<h1>My Bookings</h1>
+<% if current_user.bookings.empty? %>
+  <h3>You dont have any booking yet!</h3>
+<% else %>
+  <% current_user.bookings.each do |booking| %>
+   <%=  booking.synth.name %>
+  <% end %>
+<% end %>

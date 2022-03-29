@@ -1,0 +1,9 @@
+<h1>My Synths</h1>
+<% if current_user.synths.empty? %>
+  <h3>You dont have any synth listed yet!</h3>
+  <%= link_to 'Add one', new_synth_path, class: 'btn btn-primary'%>
+<% else %>
+  <% current_user.synths.each do |synth| %>
+   <%= link_to synth.name, synth_path(synth) %>
+  <% end %>
+<% end %>
