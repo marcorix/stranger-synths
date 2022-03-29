@@ -3,6 +3,10 @@
   <h3>You dont have any booking yet!</h3>
 <% else %>
   <% current_user.bookings.each do |booking| %>
-   <%=  booking.synth.name %>
+    <%=  link_to synth_path(booking.synth) do %>
+      <%= booking.synth.brand %> <%= booking.synth.name %>
+    <% end %>
+    <p>From: <%= booking.start_date %></p>
+    <p>To: <%= booking.end_date %></p>
   <% end %>
 <% end %>
