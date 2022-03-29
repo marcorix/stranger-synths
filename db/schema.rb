@@ -58,8 +58,7 @@ ActiveRecord::Schema.define(version: 2022_03_28_171949) do
     t.string "name"
     t.string "brand"
     t.integer "price"
-    t.integer "year"
-    t.string "polyphony"
+    t.string "category"
     t.string "conditions"
     t.text "description"
     t.bigint "user_id", null: false
