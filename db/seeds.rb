@@ -5,6 +5,7 @@ Synth.destroy_all
 User.destroy_all
 puts "DB is clean"
 
+# Users
 puts "Creating Users"
 user1 = User.create(email: "frank@gmail.com", password: "123456")
 puts "Created #{User.last.email}"
@@ -104,4 +105,109 @@ synth5.images.attach(io: file1, filename: 'synth.jpg', content_type: 'image/png'
 synth5.images.attach(io: file2, filename: 'synth.jpg', content_type: 'image/png')
 puts "Synth #{Synth.count} is created"
 
+# Synth 6
+synth6 = Synth.create!(
+  name: "piano 3",
+  brand: "Nord",
+  price: 30,
+  category: "Digital",
+  description: "88-Key Digital Piano. Works perfectly and rarely used.",
+  conditions: Synth::CONDITIONS.sample,
+  user: user2
+)
+file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648655438/xp1ky05hdv98pkh4cg18.jpg")
+file2 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648655444/mgkdkw0yajje8mdtzh2t.jpg")
+file3 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648655449/uevxc5on0ldehzhalnhl.jpg")
+file4 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648655455/ktwi9rmuw56wqn6kybpi.jpg")
+file5 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648655460/wod84kiit2g6y38dsfkg.jpg")
+synth6.images.attach(io: file1, filename: 'synth.jpg', content_type: 'image/png')
+synth6.images.attach(io: file2, filename: 'synth.jpg', content_type: 'image/png')
+synth6.images.attach(io: file3, filename: 'synth.jpg', content_type: 'image/png')
+synth6.images.attach(io: file4, filename: 'synth.jpg', content_type: 'image/png')
+synth6.images.attach(io: file5, filename: 'synth.jpg', content_type: 'image/png')
+puts "Synth #{Synth.count} is created"
+
+# Synth 7
+synth7 = Synth.create!(
+  name: "tr-808",
+  brand: "roland",
+  price: 50,
+  category: "Drum-machine",
+  description: "Legendary vintage unit heard on countless albums. Fully tested and in excellent working order.",
+  conditions: Synth::CONDITIONS.sample,
+  user: user2
+)
+file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648656038/rekk4oqpckdq8upmijwh.jpg")
+file2 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648656046/qysllueqs3fp8uhi8hig.jpg")
+file3 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648656054/jlqff9ts8mnilfvccegb.jpg")
+file4 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648656060/b7mwegph1skkmqyoftxj.jpg")
+synth7.images.attach(io: file1, filename: 'synth.jpg', content_type: 'image/png')
+synth7.images.attach(io: file2, filename: 'synth.jpg', content_type: 'image/png')
+synth7.images.attach(io: file3, filename: 'synth.jpg', content_type: 'image/png')
+synth7.images.attach(io: file4, filename: 'synth.jpg', content_type: 'image/png')
+puts "Synth #{Synth.count} is created"
+
+# Synth 8
+synth8 = Synth.create!(
+  name: "mpc 2000XL",
+  brand: "akai",
+  price: 30,
+  category: "Sampler",
+  description: "32RAM, EB-16 Effect board, 8 ch outboard with Gotek fdd emulator installed.",
+  conditions: Synth::CONDITIONS.sample,
+  user: user2
+)
+file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648656616/m05rsjni9w0fs0fbfyw2.jpg")
+file2 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648656621/gfrlfucm8cdymjddf9ej.jpg")
+file3 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648656627/re77erosxgset5k4nwvh.jpg")
+synth8.images.attach(io: file1, filename: 'synth.jpg', content_type: 'image/png')
+synth8.images.attach(io: file2, filename: 'synth.jpg', content_type: 'image/png')
+synth8.images.attach(io: file3, filename: 'synth.jpg', content_type: 'image/png')
+puts "Synth #{Synth.count} is created"
+
+# Synth 9
+synth9 = Synth.create!(
+  name: "a100 System",
+  brand: "doepfer",
+  price: 30,
+  category: "Eurorack",
+  description: "Pittsburgh VCO + Orig. Case + Patch Cables + User Manual.",
+  conditions: Synth::CONDITIONS.sample,
+  user: user2
+)
+file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657215/ccompvlcdbji56tmk1ou.jpg")
+file2 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657243/l8eoo75kgaagx0gebj0v.jpg")
+file3 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657251/sswpysfoh2nmedw9rvib.jpg")
+file4 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657236/edfct308p6eow4jsoovs.jpg")
+synth9.images.attach(io: file1, filename: 'synth.jpg', content_type: 'image/png')
+synth9.images.attach(io: file2, filename: 'synth.jpg', content_type: 'image/png')
+synth9.images.attach(io: file3, filename: 'synth.jpg', content_type: 'image/png')
+synth9.images.attach(io: file4, filename: 'synth.jpg', content_type: 'image/png')
+puts "Synth #{Synth.count} is created"
+
+# Synth 10
+synth10 = Synth.create!(
+  name: "juno-106",
+  brand: "roland",
+  price: 23,
+  category: "Digital",
+  description: "Superb polysynth in really clean condition.It's been recently serviced",
+  conditions: Synth::CONDITIONS.sample,
+  user: user2
+)
+file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657805/reudlgdkilekjnpfzlt3.jpg")
+file2 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657810/mozaeed9azccszxh4lox.jpg")
+file3 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657815/m9ow2tsgyauhsemttst3.jpg")
+file4 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657820/e4zznbbeckzkweooqymd.jpg")
+file5 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657825/mzv5xvh06z2cr69ujsab.jpg")
+file6 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657833/utyc9fmb776hlsrvpw3o.jpg")
+synth10.images.attach(io: file1, filename: 'synth.jpg', content_type: 'image/png')
+synth10.images.attach(io: file2, filename: 'synth.jpg', content_type: 'image/png')
+synth10.images.attach(io: file3, filename: 'synth.jpg', content_type: 'image/png')
+synth10.images.attach(io: file4, filename: 'synth.jpg', content_type: 'image/png')
+synth10.images.attach(io: file5, filename: 'synth.jpg', content_type: 'image/png')
+synth10.images.attach(io: file6, filename: 'synth.jpg', content_type: 'image/png')
+puts "Synth #{Synth.count} is created"
+
+# Finish
 puts "Done!"
