@@ -1,6 +1,6 @@
 class Synth < ApplicationRecord
-  CATEGORIES = %w[Analog Digital Drum-machine Eurorack Sampler]
-  CONDITIONS = %w[Brand-new Mint Good Fair]
+  CATEGORIES = %w[Analog Digital Drum-machine Eurorack Sampler].freeze
+  CONDITIONS = %w[Brand-new Mint Good Fair].freeze
 
   belongs_to :user
   has_many :bookings, dependent: :destroy
