@@ -3,6 +3,13 @@ class SynthsController < ApplicationController
 
   def index
     @synths = Synth.all
+    @makers = @synths.geocoded.map do |synth|
+      {
+        lat: synth.latitude,
+        lng: synth.longitude
+      }
+    end
+    raise
   end
 
   def show
