@@ -23,6 +23,7 @@ synth1 = Synth.create!(
   category: "Analog",
   description: "Mini synth with all patch cables and power supply",
   conditions: Synth::CONDITIONS.sample,
+  location: "138 Kingsland Rd, London",
   user: user1
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648221030/lsnj5sypsi8df7ds3gnl.jpg")
@@ -39,6 +40,7 @@ synth2 = Synth.create!(
   category: "Analog",
   description: "61-Key Programmable Preset Polyphonic Synthesiser",
   conditions: Synth::CONDITIONS.sample,
+  location: "Sidworth St, London",
   user: user1
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648636060/n1nxxkrnjpxqcreen3s2.jpg")
@@ -57,6 +59,7 @@ synth3 = Synth.create!(
   category: "Analog",
   description: "Incredible instrument. Selling because it’s not quite the one for me. Open to reasonable offers",
   conditions: Synth::CONDITIONS.sample,
+  location: "470 Kingsland Rd, London",
   user: user1
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648636753/p6cqzydjocjcmzh9k7jb.jpg")
@@ -75,6 +78,7 @@ synth4 = Synth.create!(
   category: "Digital",
   description: "Fully Serviced less than 6 months ago, only used in a Studio Setting. Comes with Original Cartridge",
   conditions: Synth::CONDITIONS.sample,
+  location: "9 Chatsworth Rd, London",
   user: user1
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648637731/ixijghvpyvfxnkjm1zlb.jpg")
@@ -97,6 +101,7 @@ synth5 = Synth.create!(
   category: "Analog",
   description: "Mini synth with all patch cables and power supply",
   conditions: Synth::CONDITIONS.sample,
+  location: "231 Lower Clapton Rd, London",
   user: user1
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648638859/q19rxdbxf3u6wfharvd8.jpg")
@@ -113,6 +118,7 @@ synth6 = Synth.create!(
   category: "Digital",
   description: "88-Key Digital Piano. Works perfectly and rarely used.",
   conditions: Synth::CONDITIONS.sample,
+  location: "84-86 Essex Rd, London",
   user: user2
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648655438/xp1ky05hdv98pkh4cg18.jpg")
@@ -135,6 +141,7 @@ synth7 = Synth.create!(
   category: "Drum-machine",
   description: "Legendary vintage unit heard on countless albums. Fully tested and in excellent working order.",
   conditions: Synth::CONDITIONS.sample,
+  location: "52 St Thomas's Rd, London",
   user: user2
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648656038/rekk4oqpckdq8upmijwh.jpg")
@@ -155,6 +162,7 @@ synth8 = Synth.create!(
   category: "Sampler",
   description: "32RAM, EB-16 Effect board, 8 ch outboard with Gotek fdd emulator installed.",
   conditions: Synth::CONDITIONS.sample,
+  location: "1 Violet Hill, London",
   user: user2
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648656616/m05rsjni9w0fs0fbfyw2.jpg")
@@ -173,6 +181,7 @@ synth9 = Synth.create!(
   category: "Eurorack",
   description: "Pittsburgh VCO + Orig. Case + Patch Cables + User Manual.",
   conditions: Synth::CONDITIONS.sample,
+  location: "5 Parkway, London",
   user: user2
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657215/ccompvlcdbji56tmk1ou.jpg")
@@ -193,6 +202,7 @@ synth10 = Synth.create!(
   category: "Digital",
   description: "Superb polysynth in really clean condition.It's been recently serviced",
   conditions: Synth::CONDITIONS.sample,
+  location: "114 Junction Rd, London",
   user: user2
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648657805/reudlgdkilekjnpfzlt3.jpg")
