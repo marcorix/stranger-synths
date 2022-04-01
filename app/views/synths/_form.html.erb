@@ -7,6 +7,7 @@
     <%= f.input :conditions, collection: Synth::CONDITIONS %>
     <%= f.input :description %>
     <%= f.input :price, collection: 1..100, label: "Price p/day" %>
+    <%= f.input :location %>
     <%= f.input :images, as: :file, input_html: { multiple: true } %>
     <%= f.button :submit, class: "btn-primary" %>
     <% end %>

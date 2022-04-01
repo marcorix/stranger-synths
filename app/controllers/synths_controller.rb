@@ -6,7 +6,9 @@ class SynthsController < ApplicationController
     @markers = @synths.geocoded.map do |synth|
       {
         lat: synth.latitude,
-        lng: synth.longitude
+        lng: synth.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { synth: synth }),
+        image_url: helpers.asset_url("marker.png")
       }
     end
   end
