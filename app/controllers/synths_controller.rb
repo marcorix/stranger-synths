@@ -51,7 +51,7 @@ class SynthsController < ApplicationController
   end
 
   def synth_params
-    params.require(:synth).permit(:name, :brand, :price, :category, :description, :conditions, images: [])
+    params.require(:synth).permit(:name, :brand, :price, :category, :description, :conditions, :location, images: [])
   end
 
 end

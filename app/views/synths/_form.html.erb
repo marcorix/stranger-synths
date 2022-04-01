@@ -7,9 +7,12 @@
     <%= f.input :conditions, collection: Synth::CONDITIONS %>
     <%= f.input :description %>
     <%= f.input :price, collection: 1..100, label: "Price p/day" %>
-    <%= f.input :location %>
+    <%= f.input :location,
+      input_html: { data: { geocoder_target: "location"}, class: "d-none" },
+      wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] }}
+    %>
     <%= f.input :images, as: :file, input_html: { multiple: true } %>
-    <%= f.button :submit, class: "btn-primary" %>
+    <%= f.button :submit, class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
