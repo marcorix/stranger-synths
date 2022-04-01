@@ -141,7 +141,7 @@ synth7 = Synth.create!(
   category: "Drum-machine",
   description: "Legendary vintage unit heard on countless albums. Fully tested and in excellent working order.",
   conditions: Synth::CONDITIONS.sample,
-  location: "52 St Thomas's Rd, London",
+  location: "43 Choumert Rd, London",
   user: user2
 )
 file1 = URI.open("https://res.cloudinary.com/dpzidqpya/image/upload/v1648656038/rekk4oqpckdq8upmijwh.jpg")
