@@ -1,19 +1,39 @@
 <div class="container">
-  <h1>Synth list</h1>
-  <% if @synths.empty? %>
-    <p>No instruments found</p>
-  <% else %>
-  <ul>
-    <% @synths.each do |synth| %>
-      <li>
-        <%= link_to synth.name, synth %>
-      </li>
-    <% end %>
-  </ul>
-  <% end %>
-  <div style="width: 100%; height: 600px;"
-    data-controller="mapbox"
-    data-mapbox-markers-value="<%= @markers.to_json %>"
-    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div class="row justify-content-center pt-3">
+    <div class="col-sm-12">
+
+    <%# SEARCH FORM %>
+      <%= form_tag synths_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-inline",
+          placeholder: "Find a synth"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+
+      <br>
+
+      <%# SYNTH GRID %>
+      <% if @synths.empty? %>
+        <p>No instruments found</p>
+      <% else %>
+        <ul>
+          <% @synths.each do |synth| %>
+            <li>
+              <h3><%= link_to synth.brand.capitalize %> <%= link_to synth.name.capitalize, synth %></h3>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+
+      <%#   MAPBOX %>
+      <div style="width: 100%; height: 600px;"
+        data-controller="mapbox"
+        data-mapbox-markers-value="<%= @markers.to_json %>"
+        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+
+    </div>
   </div>
 </div>

@@ -2,7 +2,11 @@ class SynthsController < ApplicationController
   before_action :set_synth, only: [:show, :edit, :update, :destroy]
 
   def index
-    @synths = Synth.all
+    if params[:query].present?
+      @synths = Synth.search_by_name_and_brand_and_category(params[:query])
+    else
+      @synths = Synth.all
+    end
     @markers = @synths.geocoded.map do |synth|
       {
         lat: synth.latitude,
