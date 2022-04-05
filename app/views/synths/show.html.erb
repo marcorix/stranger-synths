@@ -1,16 +1,18 @@
 <h1> <%= @synth.brand.capitalize %> <%= @synth.name.capitalize %> </h1>
+
 <% if @synth.images.attached? %>
   <% @synth.images.each do |image| %>
     <%= cl_image_tag image.key, height: 300, width: 500, crop: :fill %>
   <% end %>
 <% end %>
+
 <br>
 <br>
+
 <p>Price: £<%= @synth.price %> p/day</p>
 <p>Category: <%= @synth.category %></p>
 <p>Conditions: <%= @synth.conditions.capitalize %></p>
 <p>Description: <%= @synth.description.capitalize %></p>
-
 
 <%= link_to 'Back', synths_path %>
 
@@ -23,12 +25,12 @@
 
 <% if @synth.user != current_user %>
   <div class="col-6">
-    <%= simple_form_for ([@synth, @booking]) do |f|%>
+    <%= simple_form_for ([@synth, @booking]) do |f| %>
     <%= f.input :start_date, as: :date, html5: true %>
     <%= f.input :end_date, as: :date, html5: true %>
     <%= f.button :submit, class: "btn-primary" %>
     <% end %>
   </div>
-  <% else %>
-    <h2>You own this item</h2>
-  <% end %>
+<% else %>
+  <h2>You own this item</h2>
+<% end %>

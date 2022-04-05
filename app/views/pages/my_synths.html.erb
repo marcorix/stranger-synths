@@ -3,9 +3,13 @@
   <h3>You dont have any synth listed yet!</h3>
   <%= link_to 'Add one', new_synth_path, class: 'btn btn-primary'%>
 <% else %>
-  <% current_user.synths.each do |synth| %>
-   <%= link_to synth_path(synth) do %>
-    <%= synth.brand %> <%= synth.name %>
-   <% end %>
-  <% end %>
+  <ul>
+    <% current_user.synths.each do |synth| %>
+      <li>
+        <%= link_to synth_path(synth) do %>
+          <%= synth.brand %> <%= synth.name %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
 <% end %>
