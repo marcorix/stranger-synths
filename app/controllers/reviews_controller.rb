@@ -5,10 +5,14 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     @review.synth = @synth
 
-    if @review.save
-      redirect_to synth_path(@synth)
-    else
-      render 'synths/show'
+    respond_to do |format|
+      if @review.save
+        format.html { redirect_to synth_path(@synth) }
+        format.json # Follow the classic Rails flow and look for a create.json view
+      else
+        format.html { render 'synths/show' }
+        format.json # Follow the classic Rails flow and look for a create.json view
+      end
     end
   end
 
