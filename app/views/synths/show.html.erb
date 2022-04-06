@@ -30,7 +30,8 @@
     <%= simple_form_for ([@synth, @booking]), data: { action: "change->booking-form#calculatePrice" } do |f| %>
       <%= f.input :start_date, as: :date, html5: true, input_html: { data: { booking_form_target: "start" }} %>
       <%= f.input :end_date, as: :date, html5: true, input_html: { data: { booking_form_target: "end" }} %>
-      <div data-booking-form-target="price">Total Price: £</div>
+      <%= f.input :total_price, label: false, input_html: { class: 'd-none',  data: { booking_form_target: "totalHide" } } %>
+      <div data-booking-form-target="totalPrice">Total Price: £0</div>
       <br>
       <%= f.button :submit, class: "btn-primary" %>
     <% end %>
