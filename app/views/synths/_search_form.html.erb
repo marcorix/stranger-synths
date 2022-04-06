@@ -1,0 +1,8 @@
+ <%= form_tag synths_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-inline",
+    placeholder: "Find a synth"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>

@@ -51,7 +51,7 @@
       <h4>Be the first to leave a review for <%= @synth.brand.capitalize %> <%= @synth.name %></h4>
     <% else %>
       <% @synth.reviews.each do |review| %>
-        <%= render 'reviews/review', review: review %>
+        <%= render 'reviews/review', review: review, synth: @synth %>
       <% end %>
     <% end %>
   </div>

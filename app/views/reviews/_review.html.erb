@@ -1,6 +1,9 @@
 <div class="review" id= "review-<%= review.id %>">
   <p><%= review.user.email %></p>
   <p><%= review.created_at %></p>
+  <% review.rating.times do %>
+    <%= image_tag 'star', width: 25, height: 25 %>
+  <% end %>
   <p><%= review.content %></p>
   <hr>
 </div>

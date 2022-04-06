@@ -1,6 +1,7 @@
  <%= simple_form_for([synth, review],
                         data: { insert_in_list_target: 'form',
                                 action: 'submit->insert-in-list#send' }) do |f| %>
-    <%= f.input :content, as: :text %>
+    <%= f.input :content, as: :text, label: false %>
+    <%= f.input :rating, collection: (1..5).to_a, label: "Rate this Synth" %>
     <%= f.button :submit, class: "btn btn-primary" %>
   <% end %>
