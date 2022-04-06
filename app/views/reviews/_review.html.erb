@@ -5,7 +5,7 @@
 <%# creating rating stars %>
   <% i = 0 %>
   <% while i < 5 %>
-    <%= image_tag "star#{i < review.rating ? "" : "_black"}.png", width: 25, height: 25, opacity: 0.4 %>
+    <%= image_tag "star#{i < review.rating ? "" : "_black"}.png", width: 25, height: 25 %>
     <% i += 1 %>
   <% end %>
 

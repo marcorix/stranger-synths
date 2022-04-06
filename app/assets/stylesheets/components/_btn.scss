@@ -1,0 +1,14 @@
+.action-btn {
+  border-radius: 10px;
+  background-image: linear-gradient(to right, yellow, orange, coral, rgb(247, 37, 132));
+  width: 150px;
+  margin: 16px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin-right: 0;
+  margin-left: 0;
+    &:hover {
+      color: #88edfc;
+    }
+}
