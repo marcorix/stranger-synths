@@ -21,7 +21,7 @@
         <ul>
           <% @synths.each do |synth| %>
             <li>
-              <h3><%= link_to synth.brand.capitalize %> <%= link_to synth.name.capitalize, synth %></h3>
+              <h3><%= link_to synth.brand.capitalize, synth %> <%= link_to synth.name.capitalize, synth %></h3>
             </li>
           <% end %>
         </ul>

@@ -25,15 +25,16 @@
 <hr>
 
 <% if @synth.user != current_user %>
-  <div class="col-6">
-    <%= simple_form_for ([@synth, @booking]) do |f| %>
-      <%= f.input :start_date, as: :date, html5: true %>
-      <%= f.input :end_date, as: :date, html5: true %>
+  <div class="col-6" data-controller="booking-form" data-booking-form-price-value="<%= @synth.price %>" >
+    <h1>Book this Synth</h1>
+    <%= simple_form_for ([@synth, @booking]), data: { action: "change->booking-form#calculatePrice" } do |f| %>
+      <%= f.input :start_date, as: :date, html5: true, input_html: { data: { booking_form_target: "start" }} %>
+      <%= f.input :end_date, as: :date, html5: true, input_html: { data: { booking_form_target: "end" }} %>
+      <div data-booking-form-target="price">Total Price: £</div>
+      <br>
       <%= f.button :submit, class: "btn-primary" %>
     <% end %>
   </div>
-<% else %>
-  <h2>You own this item</h2>
 <% end %>
 
 <hr>
